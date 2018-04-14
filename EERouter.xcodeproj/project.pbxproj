@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31AE37F2081AE3D00C031F6 /* EEROUTER.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AE37E2081AE3D00C031F6 /* EEROUTER.swift */; };
 		A32E82B7205633300017BD5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32E82B6205633300017BD5F /* AppDelegate.swift */; };
 		A32E82B9205633300017BD5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A32E82B8205633300017BD5F /* ViewController.swift */; };
 		A32E82BC205633300017BD5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A32E82BA205633300017BD5F /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A31AE37E2081AE3D00C031F6 /* EEROUTER.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EEROUTER.swift; sourceTree = "<group>"; };
 		A32E82B3205633300017BD5F /* EERouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EERouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A32E82B6205633300017BD5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A32E82B8205633300017BD5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				A32E82BF205633300017BD5F /* LaunchScreen.storyboard */,
 				A32E82C2205633300017BD5F /* Info.plist */,
 				A32E82E420563D040017BD5F /* File.swift */,
+				A31AE37E2081AE3D00C031F6 /* EEROUTER.swift */,
 			);
 			path = EERouter;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31AE37F2081AE3D00C031F6 /* EEROUTER.swift in Sources */,
 				A32E82B9205633300017BD5F /* ViewController.swift in Sources */,
 				A32E82E520563D040017BD5F /* File.swift in Sources */,
 				A32E82B7205633300017BD5F /* AppDelegate.swift in Sources */,
