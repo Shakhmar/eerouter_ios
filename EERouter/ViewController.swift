@@ -1,7 +1,9 @@
 import UIKit
 import CoreMotion
+import CoreLocation
 
-class ViewController: UIViewController {
+
+class ViewController: UIViewController, CLLocationManagerDelegate  {
     
     //MARK: - Properties and Constants
     let stopColor = UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
@@ -20,6 +22,8 @@ class ViewController: UIViewController {
     //the pedometer
     var pedometer = CMPedometer()
     
+    @IBOutlet weak var longtitude: UILabel!
+    @IBOutlet weak var lantitude: UILabel!
     // timers
     var timer = Timer()
     var timerInterval = 1.0
@@ -157,15 +161,45 @@ class ViewController: UIViewController {
         return meters * mile
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a ni
+        
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        startLocation = nil
+    }
     
+    var locationManager: CLLocationManager = CLLocationManager()
+    var startLocation: CLLocation!
     
+    func locationManager(_ manager: CLLocationManager,
+                         didUpdateLocations locations: [CLLocation])
+    {
+        let latestLocation: CLLocation = locations[locations.count - 1]
+        
+        lantitude.text = String(format: "%.4f",
+                               latestLocation.coordinate.latitude)
+        longtitude.text = String(format: "%.4f",
+                                latestLocation.coordinate.longitude)
+        
+        
+    }
+    func locationManager(_ manager: CLLocationManager,
+                         didFailWithError error: Error) {
+        
+    }
+
+
+
+
 }
